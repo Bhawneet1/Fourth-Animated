@@ -1,0 +1,162 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main img {
+    height: 700px;
+    width: 510px;
+    position: relative;
+    z-index: 99;
+    object-fit: cover;
+    /* to give proper size */
+    animation-name: image;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroll-div {
+    position: absolute;
+    top: 24%;
+    width: 100%;
+    white-space: nowrap;
+    /* sarre children ik hi line mai */
+    overflow-x: auto;
+    /* agar x mai bahar to nikalne do  */
+    overflow-y: hidden;
+}
+
+#scroll-div::-webkit-scrollbar {
+    display: none;
+    /* remove scroll bar */
+}
+
+#scroll-div h1 {
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 160px;
+    margin-right: 30px;
+    letter-spacing: 4px;
+    animation-name: scroll;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#scroll-div2 {
+    z-index: 100;
+    position: absolute;
+    top: 44%;
+    width: 100%;
+    white-space: nowrap;
+    /* sarre children ik hi line mai */
+    overflow-x: auto;
+    /* agar x mai bahar to nikalne do  */
+    overflow-y: hidden;
+}
+
+#scroll-div2::-webkit-scrollbar {
+    display: none;
+    /* remove scroll bar */
+}
+
+#scroll-div2 h1 {
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 160px;
+    margin-right: 30px;
+    letter-spacing: 4px;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    /* webkit hota hai bahar kaiborder kai liyae */
+    animation-name: scroll;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#scroll-div3 {
+    position: absolute;
+    top: 64%;
+    width: 100%;
+    white-space: nowrap;
+    /* sarre children ik hi line mai */
+    overflow-x: auto;
+    /* agar x mai bahar to nikalne do  */
+    overflow-y: hidden;
+}
+
+#scroll-div3::-webkit-scrollbar {
+    display: none;
+    /* remove scroll bar */
+}
+
+#scroll-div3 h1 {
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 160px;
+    margin-right: 30px;
+    letter-spacing: 4px;
+    animation-name: scroll;
+    animation-duration: 2s;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#text {
+    font-size: 40px;
+    top: 5%;
+    position: absolute;
+    font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 60%;
+    z-index: 999;
+    text-align: center;
+    color: #808080;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(-100%);
+        /* if we do anything then calc as 30px is margin-right */
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes image {
+    33.33% {
+        transform: skew(10 deg);
+        transform: translateX(20%);
+    }
+    33.33% {
+        transform: skew(10 deg);
+        transform: translateY(20%);
+    }
+    33.33% {
+        transform: skew(10 deg);
+        transform: translateX(-20%);
+    }
+}
